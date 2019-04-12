@@ -18,7 +18,7 @@ let tourCount = document.querySelector("#tourCount");
 db.collection('timetable').doc("RxbL42EDq0SnVbqhAtRS").onSnapshot(snapshot => {
 
   let changes = snapshot.data();
- let str = changes.timetable;;
+ let str = changes.timetable;
 
 let res = str.replace("http", "https");
 console.log(res);
