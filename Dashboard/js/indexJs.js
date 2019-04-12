@@ -15,9 +15,11 @@ const storage = firebase.storage();
 let userCount = document.querySelector("#userCount");
 let bookingCount = document.querySelector('#bookingCount');
 let tourCount = document.querySelector("#tourCount");
-db.collection('timetable').onSnapshot(snapshot => {
+db.collection('timetable').doc("RxbL42EDq0SnVbqhAtRS").onSnapshot(snapshot => {
 
-  let changes = snapshot.docs;
+  let changes = snapshot.data();
+
+
   imageURL.src = changes.timetable;
   // userCount.textContent = changes.length
 
